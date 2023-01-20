@@ -89,7 +89,7 @@
                 />
 
             <Button
-                android:id="@+id/button125"
+                android:id="@+id/bt_login_normal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -102,7 +102,7 @@
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/bt_login_facebook"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
@@ -115,7 +115,7 @@
                 android:textColor="@color/white"
                 android:textSize="18sp" />
             <Button
-                android:id="@+id/button13"
+                android:id="@+id/bt_login_google"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"

@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">logowanie</string>
+    <string name="home">Home</string>
+    <string name="logo">Logo</string>
+    <string name="menu">Menu</string>
+    <string name="mapa">Mapa</string>
+    <string name="ranking">Ranking</string>
+    <string name="spolecznosc">Społeczność</string>
+    <string name="wiadomosci">Wiadomości</string>
+
 </resources>

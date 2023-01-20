@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_account"
+        android:title="Moje konto"
+        android:icon="@drawable/tomek"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_ranking"
+        android:title="Ranking"
+        android:icon="@drawable/turnieje"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_lique"
+        android:title="Ligii squash"
+        android:icon="@drawable/turnieje"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_community"
+        android:title="Społeczność"
+        android:icon="@drawable/spolecznosc"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_help_us"
+        android:title="Wspieraj nas"
+        android:icon="@drawable/help"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_faqs"
+        android:title="FAQS"
+        android:icon="@drawable/faqs"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_premium"
+        android:title="Premium"
+        android:icon="@drawable/premium"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_contacts"
+        android:title="Kontakt"
+        android:icon="@drawable/kontakty"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/menu_information"
+        android:title="Informacje"
+        android:icon="@drawable/faqs"
+        app:showAsAction="ifRoom"
+        />
+
+
+
+
+
+</menu>
