@@ -14,6 +14,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        menu()
+    }
+
+
+
+
+    fun menu(){
         btLogowanieNormal = findViewById(R.id.bt_login_normal)
         btLogowanieFacebook = findViewById(R.id.bt_login_facebook)
         btLogowanieGoogle = findViewById(R.id.bt_login_google)
@@ -22,17 +29,13 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
-
         btLogowanieFacebook?.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
-
         btLogowanieGoogle?.setOnClickListener {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
-
-
     }
 }

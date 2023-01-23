@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/drawable/logo_bacround.xml" value="0.1855" />
+        <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/drawable/recaycler_bacround.xml" value="0.1465" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/contact_row.xml" value="0.346875" />
@@ -11,7 +12,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

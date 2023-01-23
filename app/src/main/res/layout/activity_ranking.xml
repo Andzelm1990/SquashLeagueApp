@@ -22,24 +22,25 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/bt_home_home"
+                android:id="@+id/bt_ranking_home"
+                android:background="@color/white"
+                android:padding="1dp"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:background="@color/white"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/homme"
                 android:contentDescription="@string/home"
                 />
 
             <ImageView
-                android:id="@+id/iv_home_logo"
+                android:id="@+id/iv_ranking_logo"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/logo"
                 android:contentDescription="@string/logo" />
 
             <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/riv_home_avatar"
+                android:id="@+id/riv_ranking_avatar"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:scaleType="centerCrop"
@@ -61,18 +62,53 @@
             android:layout_weight="6"
             android:orientation="vertical">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_home_news"
+            <!-- miejsce wstawienie zakładek -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_ranking_layout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
-                android:layout_marginBottom="5dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/orange"
+                app:tabSelectedTextColor="@color/blue"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" >
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_ranking_first"
+                    android:backgroundTint="@color/orange"
+                    android:text="Ranking"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_ranking_second"
+                    android:text="Ligi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tab_ranking_third"
+                    android:text="Moje Ligi"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView3"
+                android:name="com.example.logowanie.FragmentRankingTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <!--
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/view_pager"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tab_layout"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+            -->
+
+
 
 
         </LinearLayout>
@@ -90,11 +126,11 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/bt_home_menu"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:id="@+id/bt_ranking_menu"
                 android:background="@color/white"
+                android:padding="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:scaleType="fitCenter"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/manuu"
@@ -102,11 +138,11 @@
                 tools:ignore="NestedWeights" />
 
             <ImageButton
-                android:id="@+id/bt_home_mapa"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:id="@+id/bt_ranking_mapa"
                 android:background="@color/white"
+                android:padding="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/mapaa"
@@ -114,33 +150,33 @@
                 android:contentDescription="@string/mapa" />
 
             <ImageButton
-                android:id="@+id/bt_home_league"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:id="@+id/bt_ranking_league"
                 android:background="@color/white"
+                android:padding="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/ranking"
                 android:contentDescription="@string/ranking"/>
 
             <ImageButton
-                android:id="@+id/bt_home_society"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:id="@+id/bt_ranking_society"
                 android:background="@color/white"
+                android:padding="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/society"
                 android:contentDescription="@string/spolecznosc"/>
 
             <ImageButton
-                android:id="@+id/bt_home_chat"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:id="@+id/bt_ranking_chat"
                 android:background="@color/white"
+                android:padding="1dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/chat"
@@ -149,7 +185,7 @@
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/nav_ranking_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
