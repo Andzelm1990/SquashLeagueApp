@@ -23,8 +23,8 @@
 
             <ImageButton
                 android:id="@+id/bt_home_home"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:background="@color/white"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/homme"

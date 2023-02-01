@@ -3,11 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/drawable-v24/circle_frame.xml" value="0.2725" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/drawable/logo_bacround.xml" value="0.1855" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/drawable/recaycler_bacround.xml" value="0.1465" />
+        <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout-port/row_liga.xml" value="0.8775" />
+        <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/activity_community.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/activity_home.xml" value="0.33" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/contact_row.xml" value="0.346875" />
+        <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/layout/row_liga.xml" value="0.33" />
         <entry key="..\:/Users/Andrzej/AndroidStudioProjects/logowanie/app/src/main/res/menu/main_menu.xml" value="0.18854166666666666" />
       </map>
     </option>
