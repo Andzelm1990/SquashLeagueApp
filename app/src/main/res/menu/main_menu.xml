@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item android:id="@+id/menu_home"
-        android:title="Home"
-        android:icon="@drawable/homme"
-        app:showAsAction="ifRoom"
-        />
     <item android:id="@+id/menu_account"
         android:title="Moje konto"
         android:icon="@drawable/tomek"
         app:showAsAction="ifRoom"
         />
+    <item android:id="@+id/menu_home"
+        android:title="Home"
+        android:icon="@drawable/homme"
+        app:showAsAction="ifRoom"
+        />
     <item android:id="@+id/menu_ranking"
         android:title="Ranking"
-        android:icon="@drawable/turnieje"
+        android:icon="@drawable/ranking"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_lique"
         android:title="Ligii squash"
-        android:icon="@drawable/turnieje"
+        android:icon="@drawable/ranking"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_community"
         android:title="Społeczność"
-        android:icon="@drawable/spolecznosc"
+        android:icon="@drawable/society"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_help_us"
         android:title="Wspieraj nas"
-        android:icon="@drawable/help"
+        android:icon="@drawable/helpus"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_faqs"
         android:title="FAQS"
-        android:icon="@drawable/faqs"
+        android:icon="@drawable/faq"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_premium"
         android:title="Premium"
-        android:icon="@drawable/premium"
+        android:icon="@drawable/premiumm"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_contacts"
         android:title="Kontakt"
-        android:icon="@drawable/kontakty"
+        android:icon="@drawable/contaktus"
         app:showAsAction="ifRoom"
         />
     <item android:id="@+id/menu_information"
         android:title="Informacje"
-        android:icon="@drawable/faqs"
+        android:icon="@drawable/faq"
         app:showAsAction="ifRoom"
         />
-
-
-
-
-
+    <item android:id="@+id/menu_log_out"
+        android:title="Wyloguj"
+        android:icon="@drawable/io"
+        app:showAsAction="ifRoom"
+        />
 </menu>

@@ -13,5 +13,7 @@
     <color name="transparency_white">#70FFFFFF</color>
     <color name="green">#21B52B</color>
     <color name="orange">#FFA000</color>
+    <color name="light_orange">#FFE6CC</color>
+
 
 </resources>

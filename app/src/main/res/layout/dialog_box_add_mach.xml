@@ -1,0 +1,253 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <EditText
+        android:id="@+id/et_nick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 1"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/et_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Player 2"
+        android:inputType="text" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="Ile setów było rozegranych:"/>
+
+    <RadioGroup
+        android:id="@+id/rg_sets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rb_1_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+
+        <RadioButton
+            android:id="@+id/rb_2_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"/>
+        <RadioButton
+            android:id="@+id/rb_3_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+
+        <RadioButton
+            android:id="@+id/rb_4_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"/>
+        <RadioButton
+            android:id="@+id/rb_5_sets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"/>
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:text="Który gracz wygrał:"/>
+
+    <RadioGroup
+        android:id="@+id/rg_winner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <RadioButton
+            android:id="@+id/rb_winner_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wygrał 1 gracz"/>
+
+        <RadioButton
+            android:id="@+id/rb_winner_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wygrał 2 gracz"/>
+    </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:text="Wyniki setów:"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:text="Gracz 1:"
+                android:padding="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:text="Gracz 2"
+                android:padding="5dp"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_player_1_set_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 1"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_player_2_set_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_player_1_set_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 1"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_player_2_set_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_player_1_set_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 1"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_player_2_set_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_player_1_set_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 1"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_player_2_set_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/et_player_1_set_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 1"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/et_player_2_set_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Player 2"
+            android:inputType="text" />
+    </LinearLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Dodaj" />
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Anuluj"/>
+    </LinearLayout>
+
+</LinearLayout>

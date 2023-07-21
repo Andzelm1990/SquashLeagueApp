@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ArticleActivity">
+
+        <ImageView
+            android:id="@+id/iv_exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@android:drawable/btn_dialog" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:padding="5dp"
+            android:background="@color/white"
+            android:layout_width="197dp"
+            android:layout_height="195dp"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:justificationMode="inter_word"
+            android:layout_marginTop="32dp"
+            android:padding="20dp"
+            android:text="sfdg 5sdf6g s4fd65g s6f5g1 s65f1g 6s5f1 6s51 "
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:justificationMode="inter_word"
+            android:padding="20dp"
+            android:text="fgsf sdfg sfd gsfgsfdglas kfjgoif jouiwf woiufiufgi uwsfiu poriuvwaperv iouwefrvouef vfdiovuh urnpowe urniudnfvsourn owieurhng osdcnv spoeriung pwoeufng ocjvn sofneortn ofnbsdof nsortnbwsuierfnbvsjd vlsjnr vbouwentbosd fnbsoternb \n \nsodjfb
+fgsf sdfg sfd gsfgsfdglas kfjgoif jouiwf woiufiufgi uwsfiu poriuvwaperv iouwefrvouef vfdiovuh urnpowe urniudnfvsourn owieurhng osdcnv spoeriung pwoeufng ocjvn sofneortn ofnbsdof nsortnbwsuierfnbvsjd vlsjnr vbouwentbosd fnbsoternb \n \nsodjfb
+fgsf sdfg sfd gsfgsfdglas kfjgoif jouiwf woiufiufgi uwsfiu poriuvwaperv iouwefrvouef vfdiovuh urnpowe urniudnfvsourn owieurhng osdcnv spoeriung pwoeufng ocjvn sofneortn ofnbsdof nsortnbwsuierfnbvsjd vlsjnr vbouwentbosd fnbsoternb \n \nsodjfb
+fgsf sdfg sfd gsfgsfdglas kfjgoif jouiwf woiufiufgi uwsfiu poriuvwaperv iouwefrvouef vfdiovuh urnpowe urniudnfvsourn owieurhng osdcnv spoeriung pwoeufng ocjvn sofneortn ofnbsdof nsortnbwsuierfnbvsjd vlsjnr vbouwentbosd fnbsoternb \n \nsodjfb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

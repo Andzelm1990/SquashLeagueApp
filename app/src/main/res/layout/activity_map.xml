@@ -61,89 +61,149 @@
             android:layout_weight="6"
             android:orientation="vertical">
 
-            <TimePicker
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/bt_doctor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@color/white"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/doktor" />
+
+                        <ImageButton
+                            android:id="@+id/bt_policja"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/policjant" />
+                    </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <ImageButton
+                                android:id="@+id/bt_wojsko"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/wojsko" />
+
+                            <ImageButton
+                                android:id="@+id/bt_strazak"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/strazak" />
+                        </LinearLayout>
+
+
+            <!--
+            <ImageButton
+                android:id="@+id/bt_strazak"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-
-        </LinearLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/bt_home_menu"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
                 android:background="@color/white"
                 android:scaleType="fitCenter"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/manuu"
-                android:contentDescription="@string/menu"
-                tools:ignore="NestedWeights" />
+                app:srcCompat="@drawable/mama" />
+                -->
 
-            <ImageButton
-                android:id="@+id/bt_home_mapa"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@color/white"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/mapaa"
-                tools:ignore="TouchTargetSizeCheck"
-                android:contentDescription="@string/mapa" />
 
-            <ImageButton
-                android:id="@+id/bt_home_league"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@color/white"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/ranking"
-                android:contentDescription="@string/ranking"/>
+                    </LinearLayout>
 
-            <ImageButton
-                android:id="@+id/bt_home_society"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@color/white"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/society"
-                android:contentDescription="@string/spolecznosc"/>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/black"/>
 
-            <ImageButton
-                android:id="@+id/bt_home_chat"
-                android:padding="2dp"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@color/white"
-                android:layout_weight="1"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/chat"
-                android:contentDescription="@string/wiadomosci"/>
-        </LinearLayout>
-    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:menu="@menu/main_menu" />
+                        <ImageButton
+                            android:id="@+id/bt_home_menu"
+                            android:padding="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/white"
+                            android:scaleType="fitCenter"
+                            android:layout_weight="1"
+                            app:srcCompat="@drawable/manuu"
+                            android:contentDescription="@string/menu"
+                            tools:ignore="NestedWeights" />
 
-</androidx.drawerlayout.widget.DrawerLayout>
+                        <ImageButton
+                            android:id="@+id/bt_home_mapa"
+                            android:padding="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/mapaa"
+                            tools:ignore="TouchTargetSizeCheck"
+                            android:contentDescription="@string/mapa" />
+
+                        <ImageButton
+                            android:id="@+id/bt_home_league"
+                            android:padding="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/ranking"
+                            android:contentDescription="@string/ranking"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_home_society"
+                            android:padding="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/society"
+                            android:contentDescription="@string/spolecznosc"/>
+
+                        <ImageButton
+                            android:id="@+id/bt_home_chat"
+                            android:padding="2dp"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:background="@color/white"
+                            android:layout_weight="1"
+                            android:scaleType="fitCenter"
+                            app:srcCompat="@drawable/chat"
+                            android:contentDescription="@string/wiadomosci"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.google.android.material.navigation.NavigationView
+                    android:id="@+id/nav_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    app:menu="@menu/main_menu" />
+
+            </androidx.drawerlayout.widget.DrawerLayout>

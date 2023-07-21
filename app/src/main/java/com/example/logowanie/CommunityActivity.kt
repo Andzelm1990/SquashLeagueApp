@@ -8,7 +8,10 @@ import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class CommunityActivity : AppCompatActivity() {
     private lateinit var drawerLayout: DrawerLayout
@@ -22,12 +25,20 @@ class CommunityActivity : AppCompatActivity() {
     private lateinit var btChat : ImageButton
     private lateinit var btHome : ImageButton
 
+    private lateinit var viewPager : ViewPager2
+    private lateinit var tabLayout : TabLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_community)
 
         intent()
-        nawigationLeft()
+        val leftMenu : LeftMenu = LeftMenu(this)
+        leftMenu.nawigationLeft()
+        viewPager2InTabLayout()
+        val selectedTab = intent.getIntExtra("tabIndex", 0)
+        viewPager.currentItem = selectedTab
+
 
 
     }
@@ -45,11 +56,11 @@ class CommunityActivity : AppCompatActivity() {
         }
         btCommunity = findViewById(R.id.bt_ranking_society)
         btCommunity.setOnClickListener{
-            Toast.makeText(this, "Już jesteś w Home", Toast.LENGTH_SHORT).show()
+            viewPager.currentItem = 0
         }
         btChat = findViewById(R.id.bt_ranking_chat)
         btChat.setOnClickListener{
-            Toast.makeText(this, "Już jesteś w Chat", Toast.LENGTH_SHORT).show()
+            viewPager.currentItem = 2
         }
         btHome = findViewById(R.id.bt_ranking_home)
         btHome.setOnClickListener{
@@ -59,17 +70,19 @@ class CommunityActivity : AppCompatActivity() {
         }
     }
 
-    fun nawigationLeft (){
-        // Pobierz drawer layout z layoutu
-        drawerLayout = findViewById(R.id.drawer_layout)
-        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
-        navigationViewmoje = findViewById(R.id.nav_ranking_view)
-        navigationViewmoje.itemIconTintList = null
-        // Pobierz przycisk menu z layoutu
-        battonMenu = findViewById(R.id.bt_ranking_menu)
-        battonMenu.setOnClickListener {
-            drawerLayout.openDrawer(GravityCompat.START)
-        }
+    fun viewPager2InTabLayout (){
+        viewPager =findViewById(R.id.vp2_tab_players)
+        tabLayout = findViewById(R.id.tab_community_layout)
+
+        viewPager.adapter = ViewPagerAdapterCommunity(this)
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "WYSZUKAJ GRACZA"
+                1 -> "ZNAJOMI"
+                2 -> "CZAT"
+                else -> ""
+            }
+        }.attach()
     }
 
 

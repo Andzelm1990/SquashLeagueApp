@@ -14,7 +14,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="2"
-            android:background="@drawable/wiersztabelimaly"
+            android:background="@drawable/frame_ranking_row"
             android:text="1" />
         <TextView
             android:id="@+id/tv_ranking_1_2"
@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="9"
-            android:background="@drawable/wiersztabeliduzy"
+            android:background="@drawable/frame_ranking_row"
             android:text="Andrzej Stachura" />
         <TextView
             android:id="@+id/tv_ranking_1_3"
@@ -30,7 +30,7 @@
             android:layout_width="0dp"
             android:layout_height="40dp"
             android:layout_weight="4"
-            android:background="@drawable/wiersztabeliduzy"
+            android:background="@drawable/frame_ranking_row"
             android:text="2546" />
     </LinearLayout>
 

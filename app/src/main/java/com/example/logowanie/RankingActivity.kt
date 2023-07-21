@@ -3,18 +3,17 @@ package com.example.logowanie
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
-class HomeActivity : AppCompatActivity() {
+class Ranking : AppCompatActivity() {
 
     private lateinit var drawerLayout: DrawerLayout
     private lateinit var battonMenu : ImageButton
@@ -27,68 +26,73 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var btChat : ImageButton
     private lateinit var btHome : ImageButton
 
+    private lateinit var viewPager : ViewPager2
+    private lateinit var tabLayout : TabLayout
+
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
-
+        setContentView(R.layout.activity_ranking)
 
         intent()
-        createRecyclerView()
-        nawigationLeft()
-
+        val leftMenu : LeftMenu = LeftMenu(this)
+        leftMenu.nawigationLeft()
+        viewPager2InTabLayout()
     }
 
-
-
-
-
-
-
-    fun createRecyclerView () {
-        rvHomeNews = findViewById(R.id.rv_home_news)
-        rvHomeNews.layoutManager = LinearLayoutManager(this)
-        rvHomeNews.adapter = MyAdapter()
-    }
-    fun nawigationLeft (){
-        // Pobierz drawer layout z layoutu
-        drawerLayout = findViewById(R.id.drawer_layout)
-        drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED)
-        navigationViewmoje = findViewById(R.id.nav_view)
-        navigationViewmoje.itemIconTintList = null
-        // Pobierz przycisk menu z layoutu
-        battonMenu = findViewById(R.id.bt_home_menu)
-        battonMenu.setOnClickListener {
-            drawerLayout.openDrawer(GravityCompat.START)
-        }
-    }
 
     fun intent (){
-        btRanking = findViewById(R.id.bt_home_league)
+        btRanking = findViewById(R.id.bt_ranking_league)
         btRanking.setOnClickListener{
-            val intent = Intent(this, Ranking::class.java)
-            startActivity(intent)
+            Toast.makeText(this, "Już jesteś w Ranking", Toast.LENGTH_SHORT).show()
         }
-        btMap =findViewById(R.id.bt_home_mapa)
+        btMap =findViewById(R.id.bt_ranking_mapa)
         btMap.setOnClickListener{
             val intent = Intent(this, MapActivity::class.java)
             startActivity(intent)
         }
-        btCommunity = findViewById(R.id.bt_home_society)
+        btCommunity = findViewById(R.id.bt_ranking_society)
         btCommunity.setOnClickListener{
             val intent = Intent(this, CommunityActivity::class.java)
+            intent.putExtra("tabIndex", 0)
             startActivity(intent)
         }
-        btChat = findViewById(R.id.bt_home_chat)
+        btChat = findViewById(R.id.bt_ranking_chat)
         btChat.setOnClickListener{
             val intent = Intent(this, CommunityActivity::class.java)
+            intent.putExtra("tabIndex", 2)
             startActivity(intent)
         }
-        btHome = findViewById(R.id.bt_home_home)
+        btHome = findViewById(R.id.bt_ranking_home)
         btHome.setOnClickListener{
-            Toast.makeText(this, "Już jesteś w Home", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, HomeActivity::class.java)
+            startActivity(intent)
+
         }
     }
+
+    fun viewPager2InTabLayout (){
+        viewPager =findViewById(R.id.vp2_tab_ranking)
+        tabLayout = findViewById(R.id.tab_ranking_layout)
+
+        viewPager.adapter = ViewPagerAdapter(this)
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = when (position) {
+                0 -> "Ranking"
+                1 -> "Ligi"
+                2 -> "Moje ligi"
+                3 -> "Moje mecze"
+                else -> ""
+            }
+        }.attach()
+    }
+
+
+
+
+
 
 
 

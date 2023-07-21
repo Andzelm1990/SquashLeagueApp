@@ -1,9 +1,12 @@
 package com.example.logowanie
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import com.example.logowanie.service.ApiArticleConector
 
 class MainActivity : AppCompatActivity() {
     var btLogowanieNormal : Button? = null
@@ -34,6 +37,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btLogowanieGoogle?.setOnClickListener {
+            /*Thread(Runnable {
+                val result = ApiArticleConector.downloadArticle().toString()
+                runOnUiThread {
+                    Toast.makeText(applicationContext, result, Toast.LENGTH_LONG).show()
+                }
+            }).start()*/
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
