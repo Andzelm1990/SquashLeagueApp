@@ -29,6 +29,13 @@ class MapActivity : AppCompatActivity() {
     private lateinit var btdoktor : ImageButton
     private lateinit var btstraz : ImageButton
 
+    private var mediaPlayerStraz: MediaPlayer? = null
+    private var mediaPlayerPolicja: MediaPlayer? = null
+    private var mediaPlayerDoktor: MediaPlayer? = null
+    private var mediaPlayerWojsko: MediaPlayer? = null
+
+    var firstTuch = 0
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,16 +89,16 @@ class MapActivity : AppCompatActivity() {
 
     fun buttonStrazClick(){
         btstraz = findViewById(R.id.bt_strazak)
-        var firstTuch = 0
-        val mediaPlayer = MediaPlayer.create(this, R.raw.strazaczek)
+        mediaPlayerStraz = MediaPlayer.create(this, R.raw.strazaczek)
         btstraz.setOnClickListener{
             if (firstTuch == 0){
                 btstraz.setImageResource(R.drawable.strazak)
-                mediaPlayer.start()
+                mediaPlayerStraz?.start()
                 firstTuch = 1
             }
             else{
-                mediaPlayer.stop()
+                mediaPlayerStraz?.stop()
+                firstTuch = 0
             }
         }
     }
@@ -100,50 +107,62 @@ class MapActivity : AppCompatActivity() {
 
     fun buttonPolicjaClick(){
         btpolicja = findViewById(R.id.bt_policja)
-        var firstTuch = 0
-        val mediaPlayer = MediaPlayer.create(this, R.raw.policjant)
+        mediaPlayerPolicja = MediaPlayer.create(this, R.raw.policjant)
         btpolicja.setOnClickListener{
             if (firstTuch == 0) {
                 btpolicja.setImageResource(R.drawable.policjant)
-                mediaPlayer.start()
-                firstTuch = 1
+                mediaPlayerPolicja?.start()
             }else{
-                mediaPlayer.stop()
+                mediaPlayerPolicja?.stop()
+                firstTuch = 0
             }
         }
     }
 
     fun buttonDoktorClick(){
         btdoktor = findViewById(R.id.bt_doctor)
-        var firstTuch = 0
-        val mediaPlayer = MediaPlayer.create(this, R.raw.lekarz)
+        mediaPlayerDoktor = MediaPlayer.create(this, R.raw.lekarz)
         btdoktor.setOnClickListener{
             if (firstTuch == 0) {
                 btdoktor.setImageResource(R.drawable.doktor)
-                mediaPlayer.start()
+                mediaPlayerDoktor?.start()
                 firstTuch = 1
             }else{
-                mediaPlayer.stop()
+                mediaPlayerDoktor?.stop()
+                firstTuch = 0
             }
         }
     }
 
     fun buttonWojskoClick(){
         btwojsko = findViewById(R.id.bt_wojsko)
-        var firstTuch = 0
-        val mediaPlayer = MediaPlayer.create(this, R.raw.wojskowy)
+        mediaPlayerWojsko = MediaPlayer.create(this, R.raw.wojskowy)
         btwojsko.setOnClickListener{
             if (firstTuch == 0) {
                 btwojsko.setImageResource(R.drawable.wojsko)
-                mediaPlayer.start()
+                mediaPlayerWojsko?.start()
                 firstTuch = 1
             }else{
-                mediaPlayer.stop()
+                mediaPlayerWojsko?.stop()
+                firstTuch = 0
             }
         }
     }
 
 
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayerStraz?.release()
+        mediaPlayerPolicja?.release()
+        mediaPlayerDoktor?.release()
+        mediaPlayerWojsko?.release()
+    }
 
-
+    override fun onPause() {
+        super.onPause()
+        mediaPlayerStraz?.pause()
+        mediaPlayerPolicja?.pause()
+        mediaPlayerDoktor?.pause()
+        mediaPlayerWojsko?.pause()
+    }
             }
