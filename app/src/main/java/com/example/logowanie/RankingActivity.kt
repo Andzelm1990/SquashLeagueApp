@@ -3,6 +3,7 @@ package com.example.logowanie
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.AutoCompleteTextView
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.view.GravityCompat
@@ -28,7 +29,6 @@ class Ranking : AppCompatActivity() {
 
     private lateinit var viewPager : ViewPager2
     private lateinit var tabLayout : TabLayout
-
 
 
 

@@ -19,10 +19,6 @@ class MainActivity : AppCompatActivity() {
 
         menu()
     }
-
-
-
-
     fun menu(){
         btLogowanieNormal = findViewById(R.id.bt_login_normal)
         btLogowanieFacebook = findViewById(R.id.bt_login_facebook)
@@ -37,12 +33,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         btLogowanieGoogle?.setOnClickListener {
-            /*Thread(Runnable {
-                val result = ApiArticleConector.downloadArticle().toString()
-                runOnUiThread {
-                    Toast.makeText(applicationContext, result, Toast.LENGTH_LONG).show()
-                }
-            }).start()*/
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
         }
