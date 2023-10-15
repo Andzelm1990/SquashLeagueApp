@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.logowanie.entity.Article
+import com.example.logowanie.fragment.*
 import com.makeramen.roundedimageview.RoundedImageView
 import com.squareup.picasso.Picasso
 
