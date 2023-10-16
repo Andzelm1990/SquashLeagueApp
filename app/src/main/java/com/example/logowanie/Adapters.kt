@@ -13,7 +13,7 @@ import com.example.logowanie.entity.Article
 import com.example.logowanie.fragment.*
 import com.makeramen.roundedimageview.RoundedImageView
 import com.squareup.picasso.Picasso
-
+/*
 class MyAdapter (private var articles: List<Article>) : RecyclerView.Adapter<MyViewHolderArticle>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderArticle {
         val leyautInflater = LayoutInflater.from(parent.context)
@@ -54,11 +54,11 @@ class MyViewHolderArticle (val view: View): RecyclerView.ViewHolder(view){
         }
     }
 }
-
+*/
 
 
 class MyViewHolder (val view: View): RecyclerView.ViewHolder(view)
-
+/*
 class MyAdapterRanking : RecyclerView.Adapter<MyViewHolderRanking>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderRanking {
         val leyautInflater = LayoutInflater.from(parent.context)
@@ -75,7 +75,8 @@ class MyAdapterRanking : RecyclerView.Adapter<MyViewHolderRanking>() {
 }
 
 class MyViewHolderRanking (val view: View): RecyclerView.ViewHolder(view)
-
+*/
+/*
 class ViewPagerAdapter(fragment: Ranking) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int = 4
 
@@ -90,6 +91,8 @@ class ViewPagerAdapter(fragment: Ranking) : FragmentStateAdapter(fragment) {
         }
     }
 }
+*/
+
 
 class AdapterLigues : RecyclerView.Adapter<MyViewHolderRanking>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderRanking {
@@ -101,12 +104,11 @@ class AdapterLigues : RecyclerView.Adapter<MyViewHolderRanking>() {
     override fun onBindViewHolder(holder: MyViewHolderRanking, position: Int) {
 
     }
-
     override fun getItemCount(): Int {
         return 10
     }
 }
-
+/*
 class AdapterPlayers : RecyclerView.Adapter<MyViewHolderRanking>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolderRanking {
         val leyautInflater = LayoutInflater.from(parent.context)
@@ -119,8 +121,8 @@ class AdapterPlayers : RecyclerView.Adapter<MyViewHolderRanking>() {
     override fun getItemCount(): Int {
         return 10
     }
-}
-
+}*/
+/*
 class ViewPagerAdapterCommunity(fragment: CommunityActivity) : FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int = 3
 
@@ -132,4 +134,4 @@ class ViewPagerAdapterCommunity(fragment: CommunityActivity) : FragmentStateAdap
             else -> FragmentRankingTable()
         }
     }
-}
+}*/
